@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 
 set VIM=%CD%
 
@@ -6,7 +6,7 @@ set path=%CD%;%path%
 
 set HOME=%CD%\HOME
 
-cd %CD%
+cd %VIM%
 start gvim.exe
 
 exit

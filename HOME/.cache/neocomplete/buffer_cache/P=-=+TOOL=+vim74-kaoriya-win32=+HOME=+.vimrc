@@ -1,1 +1,1 @@
-{'runtimepath', 'vimfiles', 'source', 'userautoload', 'basic', 'bundle', 'NeoBundle', 'mapping', 'neocom', 'neocomplete', 'vimfiler_rc', 'VimFiler', 'Unite_rc', 'Unite', 'neosnippet', 'syntax', 'nohlsearch', 'cursorline'}
+{'runtimepath', 'vimfiles', 'source', 'userautoload', 'basic', 'bundle', 'NeoBundle', 'mapping', 'neocom', 'neocomplete', 'vimfiler_rc', 'VimFiler', 'Unite_rc', 'Unite', 'neosnippet_rc', 'neosnippet', 'tab_rc', 'quickrun_rc', 'QuickRun', 'syntax', 'nohlsearch', 'cursorline'}

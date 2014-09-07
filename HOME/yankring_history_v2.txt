@@ -1,0 +1,53 @@
+y,v
+0,v
+bookmark,v
+へ,v
+Unite,v
+ ,v
+!,v
+t,v
+n,v
+e,v
+l,v
+i,v
+s,v
+iexplore.exe,v
+if !exists('b:quickrun_config')  let b:quickrun_config = {}endiflet b:quickrun_config.exec     = 'start cmd /c %s'let b:quickrun_config.output   = '!'let b:quickrun_config.shellcmd = '!%s',v
+ftplugin,v
+p,v
+o,v
+Hello World!,v
+NeoBundle 'tyru/open-browser.vim',v
+let g:quickrun_config = {},v
+スレインが報われる未来が見えない ,v
+vimのquickrunを使って編集中のHTMLファイルをブラウザで開く,v
+let g:quickrun_config['html'] = { 'command' : 'open', 'exec' : '%c %s', 'outputter': 'browser' },v
+hogehoge.css,v
+title,v
+>,v
+",v
+        <link rel=dd,V
+        ,V
+<link rel="stylesheet" type="text/css" href="example.css">,v
+m,v
+c,v
+5,v
+L,v
+M,v
+T,v
+H,v
+b,v
+d,v
+<!DOCTYPE html><html><head><meta charset="utf-8" /><title>HTML 5 complete</title><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--><style>  article, aside, dialog, figure, footer, header,  hgroup, menu, nav, section { display: block; }</style></head><body><p>Hello World</p></body></html>,v
+        snippet HTML5        abbr    ,V
+        abbr    ,V
+r,v
+.,v
+thinca/vim-editvar,V
+ハードタブ,v
+Frameset DTD,v
+Example:>	snippet    [name]	abbr       [abbreviation]	alias      [aliases]	regexp     [pattern]	options    [options]	   if ${1:condition}	     ${2}	   endif,v
+2012-06-19Vim script の変数のスコープについてのお話Add Starosyo-mangaKureduki_MaarivimVim の変数のスコープについて調べたら「わかってない」ということがわかった - Succession & Climaxこのような記事を見かけた。具体的にどんなコードで試したのかわらないので具体的なアドバイスはできそうにないが、せっかくので Vim script の変数のスコープについて解説してみるよ。どんなスコープがあるのかVim の変数は変数名の接頭子によってスコープが決定します。接頭子	スコープg: 	グローバルb: 	現在のバッファにローカルw: 	現在のウィンドウにローカルt: 	現在のタブページにローカルs: 	現在のスクリプトファイルにローカルl: 	関数ローカルv: 	組み込み変数接頭子を省略した場合は、    関数内だった場合は l:    それ以外ならば g:になります。ただし、count などの一部の変数は互換性の関係で v:count のように組み込み変数として扱われてしまうので注意が必要です。当然ですが、バッファ/ウィンドウ/タブページが何であるかはきちんと知っておく必要があります。長くなるのでここでは解説しません。今どこにいるのかを意識するVim script を書く上で重要なのは、スクリプトの実行中に今どこにいるのかを意識することです。上記のスコープの説明を見るとわかるように、各ローカル変数は現在のコンテキストに依存します。例えば、let b:foo = 10newecho b:fooこれは、b:foo が存在しないというエラーになります。なぜなら、2行目で新しいバッファを開いているので、最初の b:foo と最後の b:foo は別のバッファの変数を参照しているからです。これは変数に限らずローカルオプションやローカルなキーマッピングなどにも言えることなので、スクリプトの各行で Vim がどのような状態にあるかを意識すると良いです。また、例えば以下のようなコードfor i in g:user_config  call s:setting(i)endforこれをグローバルスコープ(関数の外)に書いていた場合、最初に書いたルールの通り、i はグローバル変数になります。これは見落としがちなので注意が必要です。別のスコープの変数にアクセスするとなりのバッファの変数を操作するのに、いちいちバッファを移動するのは面倒です。そもそも、バッファの移動は様々な autocmd が走ったりして副作用が大きいため避けたいところです。そんなときのために、別のスコープの変数にアクセスする手段がいくつか用意されています。バッファ変数getbufvar({バッファ番号}, {変数名}) で指定バッファの変数の値を取得できます。setbufvar({バッファ番号}, {変数名}, {値}) で指定バッファの変数の値を設定できます。タブページ変数gettabvar({タブ番号}, {変数名}) で指定タブページの変数の値を取得できます。settabvar({タブ番号}, {変数名}, {値}) で指定タブページの変数の値を設定できます。ウィンドウ変数gettabwinvar({タブ番号}, {ウィンドウ番号}, {変数名}) で指定タブページの指定ウィンドウの変数の値を取得できます。settabwinvar({タブ番号}, {ウィンドウ番号}, {変数名}, {値}) で指定タブページの変数の指定ウィンドウの値を設定できます。,v
+/,v
+vim-scripts/YankRing.vim,v
+" 自分用 snippet ファイルの場所let s:my_snippet = '~/snippet/'let g:neosnippet#snippets_directory = s:my_snippet,v

@@ -7,6 +7,9 @@ source ~/userautoload/mapping.vim "キーマッピング
 source ~/userautoload/neocom.vim    "neocomplete設定
 source ~/userautoload/vimfiler_rc.vim "VimFiler設定 
 source ~/userautoload/Unite_rc.vim    "Unite設定ファイル
+source ~/userautoload/neosnippet_rc.vim "neosnippet設定ファイル
+source ~/userautoload/tab_rc.vim  "タブ設定ファイル
+
 
 "最後に書く
 syntax on

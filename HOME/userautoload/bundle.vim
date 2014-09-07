@@ -50,7 +50,14 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-surround'
 
 "NeoBundle 'sjl/gundo.vim' "ReDo UnDo ツリー管理 
+"YankRIng
+NeoBundle 'vim-scripts/YankRing.vim'
 
+
+NeoBundle 'thinca/vim-editvar'
+
+"ブラウザで開く
+NeoBundle 'tyru/open-browser.vim'
 
 
 call neobundle#end()

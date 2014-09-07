@@ -8,64 +8,69 @@
 # hlsearch on (H) or off (h):
 ~h
 # ç≈å„ÇÃ åüçıÉpÉ^Å[Éì:
-~MSle0~/user
+~MSle0~/\s*
 
 # ç≈å„Ç…íuä∑Ç≥ÇÍÇΩï∂éöóÒ:
 $i
 
 # ÉRÉ}ÉìÉhÉâÉCÉì çÄñ⁄ÇÃóöó (êVÇµÇ¢Ç‡ÇÃÇ©ÇÁå√Ç¢Ç‡ÇÃÇ÷):
+:q!
+:e a.html
 :source %
 :w
+:source 
+:silent! start iexplore.exe "%"
 :e ~/userautoload/mapping.vim
-:Unite file_mru
-:undol
-:help Unite
-:q!
-:q
-:help neosnippet
-:e a.html
-:Unite neosnippet/runtime
-:Unite file:gvim.exe
-:Unite snippet
-:e a.c
-:e ~/userautoload/basic.vim
-:e ~/userautoload/neosnippet.rc.vim
-:Unite! file_mru
-:e 1.c
-:e ~/.vimrc
 :e ~/userautoload/bundle.vim
-:e ~/userautoload/Unite_rc.vim
-:Unite file_include
-:Unite file:CHANGES.txt
-:e ~/userautoload/neocom.vim
-:Unite neobundle:
-:e ~/userautoload//vimfiler_rc.vim
-:e ~/userautoload//vimfiler_rc.v
-:Unite file
-:Unite file/new
-:e 1.html
-:1.html
-:Source %
-:.,.+4w
-:VimFiler
-:vimfiler
-:Unite neobundle
+:e ~/userautoload/quickrun_rc.vim
+:e P:/TOOL/vim74-kaoriya-win32/vim74/ftplugin/
+:e P:/TOOL/vim74-kaoriya-win32/CHANGES.txt
+:echo $VIMRUNTIME/ftplugin
+:echo $VIMRUNTIME
+:e ~/vimfiles/af
+:help g:openbrowser_browser_commands
+:1
+:q
+:e ~/.vimrc
+:Unite $VIMRC
+:QuickRun 
+:e ~/my_snippets/html.snip
+:help neosnippet
 :Unite buffer
+:a.html
+:YRShow
+:Unite buffers
 :map
-:qu
-:NeoBundleInstall Unite
-:NeoBundleCheck Unite
-:sall
-:Unite
-:nerd
-:Nerd
-:nerdco
-:help unix@ja
-:Unite 
-:unhide
-:uni
+:map YRShow
+:e ~/userautoload/neosnippet_rc.vim
+:e ~/userautoload/neosnippet.rc.vim
+:wq
+:Unite -auto-preview
+:Unite output
+:help neosnippet-examples
+:Unite neosnippet/user
+:VimFiler
+:VimFilerClose
+:e ~/userautoload/vimfiler_rc.vim
+:help yankring
+:e ~/userautoload/tab_rc.vim
+:Unite file_mru
+:'<,'>QuickRun vim
+:'<,'>
+:'<,'>qq
+:5802
+<'<,'>! # & * < = > @ AutoCloseOff AutoCloseOn AutoCloseToggle Autodate AutodateOFF AutodateON CdCurrent DiffOrig DoMatchParen Double Edit Emmet EmmetInstall Errors Explore Fever FullScreen GLVS GetLatestVimScripts GetScripts Godoc HDensity HTMLConvert Hankaku Hexplore HzjaConvert IminsertOff IminsertOn Lexplore MenuLang MkVimball NDensity NeoBundle NeoBundleCheck NeoBundleCheckUpdate NeoBundleClean NeoBundleClearCache NeoBundleCount NeoBundleDirectInstall NeoBundleDisable NeoBundleDocs NeoBundleExtraEdit NeoBundleFetch NeoBundleGC NeoBundleInstall NeoBundleLazy NeoBundleList NeoBundleLoadCache NeoBundleLocal NeoBundleLog NeoBundleRecipe NeoBundleReinstall NeoBundleRollback NeoBundleSaveCache NeoBundleSource NeoBundleUpdate NeoBundleUpdatesLog NeoCompleteAutoCompletionLength NeoCompleteBufferMakeCache NeoCompleteClean NeoCompleteDictionaryMakeCache NeoCompleteDisable NeoCompleteEnable NeoCompleteIncludeMakeCache NeoCompleteLock NeoCompleteSetFileType NeoCompleteSyntaxMakeCache NeoCompleteTagMakeCache NeoCompleteToggle NeoCompleteUnlock NeoCompleteVimMakeCache NeoMRUImportDirectory NeoMRUImportFile NeoMRUReload NeoMRUSave NeoSnippetClearMarkers NeoSnippetEdit NeoSnippetMakeCache NeoSnippetSource NetUserPass NetrwClean NetrwSettings Nexplore Next NoMatchParen Nohlsearch Nread Nsource Ntree Nwrite Pexplore Print QuickRun Read Revert RmVimball SM Scratch ScreenMode Sexplore Source SyntasticCheck SyntasticInfo SyntasticReset SyntasticSetLoclist SyntasticToggleMode TOhtml Texplore ToggleHZ Transform Tutorial Undiff Unite UniteBookmarkAdd UniteClose UniteResume UniteWithBufferDir UniteWithCurrentDir UniteWithCursorWord UniteWithInput UniteWithInputDirectory UniteWithProjectDir UseVimball VDsplit VerifyEnc Vexplore VimFiler VimFilerBufferDir VimFilerClose VimFilerCreate VimFilerCurrentDir VimFilerDouble VimFilerExplorer VimFilerSimple VimFilerSplit VimFilerTab VimProcBang VimProcRead VimballList Vimuntar WWidth Write X Zenkaku abbreviate abclear aboveleft all amenu anoremenu append argadd argdelete argdo argedit argglobal arglocal args argument ascii augroup aunmenu autocmd bNext badd ball bdelete behave belowright bfirst blast bmodified bnext botright bprevious break breakadd breakdel breaklist brewind browse bufdo buffer buffers bunload bwipeout cNext cNfile cabbrev cabclear caddbuffer caddexpr caddfile call catch cbuffer cc cclose cd center cexpr cfile cfirst cgetbuffer cgetexpr cgetfile change changes chdir checkpath checktime clast clist close cmap cmapclear cmenu cnewer cnext cnfile cnoreabbrev cnoremap cnoremenu colder colorscheme comclear command compiler confirm continue copen copy cpfile cprevious cquit crewind cscope cstag cunabbrev cunmap cunmenu cwindow debug debuggreedy delcommand delete delfunction delmarks diffget diffoff diffpatch diffput diffsplit diffthis diffupdate digraphs display djump dlist doautoall doautocmd drop dsearch dsplit earlier echo echoerr echohl echomsg echon edit else elseif emenu endfor endfunction endif endtry endwhile enew ex execute exit exusage file files filetype finally find finish first fixdel fold foldclose folddoclosed folddoopen foldopen for function global goto grep grepadd gui gvim hardcopy help helpfind helpgrep helptags hide highlight history iabbrev iabclear if ijump ilist imap imapclear imenu inoreabbrev inoremap inoremenu insert intro isearch isplit iunabbrev iunmap iunmenu join jumps k keepalt keepjumps keepmarks keeppatterns lNext lNfile laddbuffer laddexpr laddfile language last later lbuffer lcd lchdir lclose lcscope left leftabove let lexpr lfile lfirst lgetbuffer lgetexpr lgetfile lgrep lgrepadd lhelpgrep list ll llast llist lmake lmap lmapclear lnewer lnext lnfile lnoremap loadkeymap loadview lockmarks lockvar lolder lopen lpfile lprevious lrewind ls ltag lua luado luafile lunmap lvimgrep lvimgrepadd lwindow make map mapclear mark marks match menu menutranslate messages mkexrc mksession mkspell mkview mkvimrc mode move mzfile mzscheme nbclose nbkey nbstart new next nmap nmapclear nmenu nnoremap nnoremenu noautocmd nohlsearch noreabbrev noremap noremenu normal noswapfile number nunmap nunmenu oldfiles omap omapclear omenu only onoremap onoremenu open options ounmap ounmenu ownsyntax pclose pedit perl perldo pop popup ppop preserve previous print profdel profile promptfind promptrepl psearch ptNext ptag ptfirst ptjump ptlast ptnext ptprevious ptrewind ptselect put pwd py3 py3do py3file pydo pyfile python python3 qall quit quitall read recover redir redo redraw redrawstatus registers resize retab return rewind right rightbelow ruby rubydo rubyfile rundo runtime rviminfo sNext sall sandbox sargument saveas sbNext sball sbfirst sblast sbmodified sbnext sbprevious sbrewind sbuffer scriptencoding scriptnames scscope set setfiletype setglobal setlocal sfind sfirst shell sign silent simalt slast sleep smagic smap smapclear smenu snext sniff snomagic snoremap snoremenu sort source spelldump spellgood spellinfo spellrepall spellundo spellwrong split sprevious srewind stag startgreplace startinsert startreplace stjump stop stopinsert stselect substitute sunhide sunmap sunmenu suspend sview swapname syncbind syntax syntime t tNext tab tabNext tabclose tabdo tabedit tabfind tabfirst tablast tabmove tabnew tabnext tabonly tabprevious tabrewind tabs tag tags tcl tcldo tclfile tearoff tfirst throw tjump tlast tmenu tnext topleft tprevious trewind try tselect tunmenu unabbreviate undo undojoin undolist unhide unlet unlockvar unmap unmenu unsilent update verbose version vertical vglobal view vimgrep vimgrepadd visual viusage vmap vmapclear vmenu vnew vnoremap vnoremenu vsplit vunmap vunmenu wNext wall while wincmd windo winpos winsize wnext wprevious wq wqall write wsverb wundo wviminfo xall xit xmap xmapclear xmenu xnoremap xnoremenu xunmap xunmenu yank z ~
+:QuickRun
+:echo &filetype
+:eQ ~/userautoload/mapping.vim
+:'<,'>Q
+:'<,'>quickrun type=vim
 
 # åüçıï∂éöóÒ çÄñ⁄ÇÃóöó (êVÇµÇ¢Ç‡ÇÃÇ©ÇÁå√Ç¢Ç‡ÇÃÇ÷):
+?/\s*
+?/^\s*
+?/filename
+?/manual
 ?/user
 ? \m<|1|>
 ? \$cursor\$
@@ -82,9 +87,13 @@ $i
 # éÆ çÄñ⁄ÇÃóöó (êVÇµÇ¢Ç‡ÇÃÇ©ÇÁå√Ç¢Ç‡ÇÃÇ÷):
 
 # ì¸óÕçs çÄñ⁄ÇÃóöó (êVÇµÇ¢Ç‡ÇÃÇ©ÇÁå√Ç¢Ç‡ÇÃÇ÷):
+@P:/TOOL/vim74-kaoriya-win32/HOME/userautoload/neosnippet_rc.vim
+@echo
+@YankRing_rc.vim
+@tab_rc.vim
+@y
 @a
 @vimfiler_rc.vim
-@y
 @ul>li*
 @ul
 
@@ -92,192 +101,317 @@ $i
 
 # ÉåÉWÉXÉ^:
 "0	LINE	0
-	source ~/userautoload/Unite_rc.vim    "Uniteê›íËÉtÉ@ÉCÉã
+	        snippet HTML5
+	        abbr    
 "1	LINE	0
-	"
+	        <link rel=dd
 "2	LINE	0
-	"
-"3	LINE	0
+	        
+"3	CHAR	0
+	vim-scripts/YankRing.vim
 	
-"4	LINE	0
+"4	CHAR	0
+	vim-scripts/YankRing.vim
 	
+"5	CHAR	0
 	
-	
-	
-"5	LINE	0
+	let b:foo=20
+	echo b:foo
 	
 "6	LINE	0
-	
+	c://
 "7	LINE	0
+	c:
+"8	CHAR	0
 	
-"8	LINE	0
-	" ï™äÑÇµÇΩê›íËÉtÉ@ÉCÉãÇÇ∑Ç◊Çƒì«Ç›çûÇﬁ
+	"" LiquidÇ≈âÊëúpathÇï‚äÆÇ∑ÇÈ
+	"" ÉfÉtÉHÉãÉg &l:path(åüçıëŒè€ÇÃÉfÉBÉåÉNÉgÉä`,`ãÊêÿÇË)
+	"let g:neocomplete#sources#include#paths.liquid =
+	  "\ '/Users/alpaca-tc/projects/alpaca-tc.github.io/source'
+	
+	"" ÉfÉtÉHÉãÉg &l:include(ê≥ãKï\åªÇ…É}ÉbÉ`ÇµÇΩÇÁï‚äÆÇäJén)
+	"let g:neocomplete#sources#include#patterns.liquid =
+	  "\ '\({\s*%\(\s\+\w\+\)\+\(\s*\|\s\+[a-zA-Z0-9_#\?\!]\+\)\@=\|{\s*{\(\s\+\w\+\)\+\(\s*\|\s\+[a-zA-Z0-9_#\?\!]\+\)\@=\)'
+	
+	"" ÉfÉtÉHÉãÉg &l:includeexpr(ÉtÉ@ÉCÉãÉpÉXÇèoóÕÇ∑ÇÈç€Ç…ïœä∑Ç∑ÇÈ)
+	"let g:neocomplete#sources#include#exprs.liquid =
+	  "\ 'substitute(v:fname, "^/", "", "")'
+	
+	"" ÉfÉtÉHÉãÉg '.'(ãÊêÿÇËï∂éöÇÃéwíË)
+	"let g:neocomplete#sources#file_include#delimiters.liquid = '/'
+	
+	"" ÉfÉtÉHÉãÉg [](ï‚äÆÇ∑ÇÈÉtÉ@ÉCÉãägí£éqÉtÉBÉãÉ^Å[)
+	"let g:neocomplete#sources#file_include#exts.liquid =
+	  "\ ['png', 'jpg', 'gif', 'jpeg', 'ico']
 "9	LINE	0
-	NeoBundle 'Shougo/neomru.vim'
+	"
 "i	CHAR	0
 	i:sa	Ä˝cÄ˝bÄ˝,Ä˝.:NoeÄkbÄkbeoBund		 Unite:ÄkuÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbÄkbInstall Unite:ÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkuÄkbÄkbÄkbÄkbÄkbÄkbuse	bu	jjjjjjjjjjjjjjjkjllllllla.vim:wÄ˝cÄ˝bklla.vimjÄkbj
 ""-	CHAR	0
-	e
+	 
 
 # ÉtÉ@ÉCÉãÉ}Å[ÉN:
-'0  1  0  ~/userautoload/mapping.vim
-'1  39  14  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
-'2  4  1  P:/TOOL/vim74-kaoriya-win32/a.c
-'3  13  0  ~/userautoload/basic.vim
-'4  32  0  ~/userautoload/bundle.vim
-'5  4  0  ~/userautoload/neocom.vim
-'6  66  2  ~/userautoload/bundle.vim
-'7  4  0  P:/TOOL/vim74-kaoriya-win32/1.html
-'8  7  22  ~/userautoload/vimfiler_rc.vim
-'9  246  83  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+'0  8  14  P:/TOOL/vim74-kaoriya-win32/a.html
+'1  1  0  ~/userautoload/quickrun_rc.vim
+'2  4  64  ~/userautoload/quickrun_rc.vim
+'3  169  27  ~/vimfiles/bundle/.neobundle/doc/openbrowser.txt
+'4  3  14  ~/userautoload/quickrun_rc.vim
+'5  30  7  ~/my_snippets/html.snip
+'6  40  23  ~/my_snippets/html.snip
+'7  23  0  ~/my_snippets/html.snip
+'8  25  24  ~/my_snippets/html.snip
+'9  405  15  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
 
 # ÉWÉÉÉìÉvÉäÉXÉg (êVÇµÇ¢Ç‡ÇÃÇ™êÊ):
--'  1  0  ~/userautoload/mapping.vim
--'  58  44  ~/userautoload/bundle.vim
--'  318  0  ~/vimfiles/bundle/.neobundle/doc/unite.txt
--'  1  0  ~/vimfiles/bundle/.neobundle/doc/unite.txt
--'  39  14  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
--'  24  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  1  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  8  14  P:/TOOL/vim74-kaoriya-win32/a.html
+-'  10  28  ~/userautoload/mapping.vim
+-'  52  13  ~/userautoload/bundle.vim
+-'  1  0  P:/TOOL/vim74-kaoriya-win32/[quickrun output]
+-'  25  13  P:/TOOL/vim74-kaoriya-win32/a.html
 -'  1  0  P:/TOOL/vim74-kaoriya-win32/a.html
--'  4  1  P:/TOOL/vim74-kaoriya-win32/a.c
--'  3  9  P:/TOOL/vim74-kaoriya-win32/a.c
--'  1  0  P:/TOOL/vim74-kaoriya-win32/a.c
--'  6  0  P:/TOOL/vim74-kaoriya-win32/a.c
--'  11  0  ~/.vimrc
--'  46  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  13  0  ~/userautoload/basic.vim
--'  12  4  ~/userautoload/neosnippet.rc.vim
--'  21  0  P:/TOOL/vim74-kaoriya-win32/[unite] - default
--'  1  0  P:/TOOL/vim74-kaoriya-win32/[unite] - default
--'  26  28  ~/userautoload/bundle.vim
--'  90  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  32  0  ~/userautoload/bundle.vim
--'  1  0  ~/userautoload/bundle.vim
--'  4  0  ~/userautoload/neocom.vim
--'  4  0  ~/userautoload/vimfiler_rc.vim
--'  1  0  ~/userautoload/vimfiler_rc.v
--'  20  0  ~/userautoload/bundle.vim
--'  134  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  66  2  ~/userautoload/bundle.vim
--'  21  39  ~/userautoload/bundle.vim
--'  22  0  ~/userautoload/bundle.vim
--'  4  0  P:/TOOL/vim74-kaoriya-win32/1.html
--'  24  39  ~/userautoload/neocom.vim
--'  3  54  ~/userautoload/vimfiler_rc.vim
--'  1  0  ~/userautoload/vimfiler_rc.vim
--'  7  22  ~/userautoload/vimfiler_rc.vim
--'  236  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  17  0  ~/.vimrc
--'  225  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  237  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  246  83  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  260  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  16  32  ~/userautoload/bundle.vim
--'  28  0  ~/vimfiles/bundle/unite.vim/README.md
--'  1  0  ~/vimfiles/bundle/unite.vim/README.md
--'  15  0  ~/userautoload/bundle.vim
--'  4  16  ~/.vimrc
--'  282  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  307  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  310  1  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  304  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  313  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  1  0  P:/takasugi/ÉvÉçÉOÉâÉÄáT/CSS/RENSHUU3/HOME.html
--'  18  6  P:/takasugi/ÉvÉçÉOÉâÉÄáT/CSS/RENSHUU3/HOME.html
--'  39  0  P:/TOOL/vim74-kaoriya-win32/[unite] - default
--'  63  0  P:/TOOL/vim74-kaoriya-win32/vimrc
--'  1  0  P:/TOOL/vim74-kaoriya-win32/vimrc
--'  1  0  P:/TOOL/vim74-kaoriya-win32/[unite] - action-1
--'  2  15  ~/userautoload/bundle.vim
--'  37  15  ~/userautoload/bundle.vim
--'  79  2  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  77  66  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  61  4  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  38  26  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  2  0  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  1684  0  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  1368  33  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  1  0  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  8  0  ~/_gvimrc
--'  15  0  ~/userautoload/basic.vim
--'  11  0  ~/userautoload/basic.vim
--'  17  0  ~/userautoload/basic.vim
--'  12  0  ~/.vimrc
--'  14  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  2170  65  P:/TOOL/vim74-kaoriya-win32/vim74/filetype.vim
--'  22  0  ~/userautoload/basic.vim
--'  19  0  ~/userautoload/basic.vim
--'  2406  22  P:/TOOL/vim74-kaoriya-win32/vim74/filetype.vim
--'  285  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  288  1  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  291  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  1  0  P:/takasugi/ÉvÉçÉOÉâÉÄáT/CSS/RENSHUU3/HOME.html
--'  18  6  P:/takasugi/ÉvÉçÉOÉâÉÄáT/CSS/RENSHUU3/HOME.html
--'  63  0  P:/TOOL/vim74-kaoriya-win32/vimrc
--'  1  0  P:/TOOL/vim74-kaoriya-win32/vimrc
--'  1  0  P:/TOOL/vim74-kaoriya-win32/[unite] - action-1
--'  79  2  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  77  66  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  61  4  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  38  26  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  2  0  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  1684  0  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  1368  33  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  1  0  ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
--'  8  0  ~/_gvimrc
--'  4  0  P:/TOOL/vim74-kaoriya-win32/1.html
--'  214  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  203  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
--'  215  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  1  0  ~/userautoload/quickrun_rc.vim
+-'  7  37  P:/TOOL/vim74-kaoriya-win32/vim74/after/ftplugin/html.vim
+-'  4  25  ~/userautoload/quickrun_rc.vim
+-'  25  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  1  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  48  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  169  27  ~/vimfiles/bundle/.neobundle/doc/openbrowser.txt
+-'  1  0  ~/vimfiles/bundle/.neobundle/doc/openbrowser.txt
+-'  71  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  3  14  ~/userautoload/quickrun_rc.vim
+-'  12  49  ~/.vimrc
+-'  2  54  ~/userautoload/quickrun_rc.vim
+-'  59  10  P:/TOOL/vim74-kaoriya-win32/a.html
+-'  62  2  P:/TOOL/vim74-kaoriya-win32/a.html
+-'  42  8  ~/my_snippets/html.snip
+-'  30  7  ~/my_snippets/html.snip
+-'  117  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  40  23  ~/my_snippets/html.snip
+-'  67  9  P:/TOOL/vim74-kaoriya-win32/a.html
+-'  23  0  ~/my_snippets/html.snip
+-'  14  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  13  10  ~/my_snippets/html.snip
+-'  21  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  214  11  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  294  15  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  163  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  25  24  ~/my_snippets/html.snip
+-'  27  0  ~/my_snippets/html.snip
+-'  8  6  ~/my_snippets/html.snip
+-'  7  18  ~/my_snippets/html.snip
+-'  6  1  ~/my_snippets/html.snip
+-'  5  0  ~/my_snippets/html.snip
+-'  4  8  ~/my_snippets/html.snip
+-'  3  0  ~/my_snippets/html.snip
+-'  2  0  ~/my_snippets/html.snip
+-'  1  0  ~/my_snippets/html.snip
+-'  21  0  ~/my_snippets/html.snip
+-'  20  13  ~/my_snippets/html.snip
+-'  19  30  ~/my_snippets/html.snip
+-'  18  17  ~/my_snippets/html.snip
+-'  17  0  ~/my_snippets/html.snip
+-'  16  0  ~/my_snippets/html.snip
+-'  15  0  ~/my_snippets/html.snip
+-'  14  9  ~/my_snippets/html.snip
+-'  12  21  ~/my_snippets/html.snip
+-'  14  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  21  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  191  11  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  271  15  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  140  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  14  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  21  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  14  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  21  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  168  11  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  248  15  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  94  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  47  9  P:/TOOL/vim74-kaoriya-win32/a.html
+-'  14  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  21  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  14  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  21  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  14  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  21  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  14  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  21  11  ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
+-'  145  11  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  225  15  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  12  49  ~/.vimrc
+-'  42  8  ~/my_snippets/html.snip
+-'  30  7  ~/my_snippets/html.snip
+-'  40  23  ~/my_snippets/html.snip
+-'  23  0  ~/my_snippets/html.snip
+-'  1  0  ~/userautoload/quickrun_rc.vim
+-'  7  37  P:/TOOL/vim74-kaoriya-win32/vim74/after/ftplugin/html.vim
+-'  4  25  ~/userautoload/quickrun_rc.vim
+-'  2  0  P:/TOOL/vim74-kaoriya-win32/vimfiler:default
+-'  169  27  ~/vimfiles/bundle/.neobundle/doc/openbrowser.txt
+-'  1  0  ~/vimfiles/bundle/.neobundle/doc/openbrowser.txt
+-'  3  14  ~/userautoload/quickrun_rc.vim
+-'  12  49  ~/.vimrc
 
 # ÉtÉ@ÉCÉãì‡É}Å[ÉNÇÃóöó (êVÇµÇ¢Ç‡ÇÃÇ©ÇÁå√Ç¢Ç‡ÇÃ):
 
+> P:/TOOL/vim74-kaoriya-win32/a.html
+	"	8	14
+	^	1	2
+	.	5	0
+	+	1	0
+	+	87	0
+	+	97	4
+	+	97	0
+	+	97	0
+	+	97	0
+	+	90	0
+	+	89	0
+	+	98	1
+	+	89	0
+	+	98	0
+	+	103	0
+	+	98	0
+	+	102	0
+	+	98	0
+	+	1	0
+	+	85	0
+	+	86	0
+	+	83	1
+	+	82	3
+	+	82	0
+	+	80	0
+	+	79	0
+	+	62	0
+	+	1	1
+	+	62	12
+	+	1	0
+	+	1	0
+	+	62	0
+	+	62	0
+	+	62	0
+	+	62	0
+	+	1	1
+	+	62	0
+	+	62	0
+	+	1	1
+	+	45	11
+	+	50	51
+	+	59	10
+	+	1	1
+	+	25	0
+	+	5	0
+	i	99	3
+	j	98	1
+	k	99	1
+	l	99	1
+	m	98	2
+
 > P:/TOOL/vim74-kaoriya-win32/vimfiler:default
 	"	2	0
-	.	23	0
-	+	199	0
-	+	199	0
-	+	200	0
-	+	216	0
-	+	216	0
-	+	216	0
-	+	204	0
-	+	205	0
-	+	207	0
-	+	215	0
-	+	215	0
-	+	215	0
-	+	215	0
-	+	215	0
-	+	215	0
-	+	177	0
-	+	177	0
-	+	155	0
-	+	155	0
-	+	133	0
-	+	133	0
-	+	111	0
-	+	111	0
-	+	89	0
-	+	89	0
-	+	67	0
-	+	67	0
-	+	67	0
-	+	45	0
-	+	45	0
-	+	45	0
-	+	23	0
-	+	23	0
+	.	24	0
+	+	547	0
+	+	552	0
+	+	559	0
+	+	559	0
+	+	559	0
+	+	523	0
+	+	523	0
+	+	500	0
+	+	500	0
+	+	456	0
+	+	456	0
+	+	457	0
+	+	478	0
+	+	478	0
+	+	478	0
+	+	478	0
+	+	478	0
+	+	478	0
+	+	478	0
+	+	462	0
+	+	463	0
+	+	477	0
+	+	477	0
+	+	477	0
+	+	411	0
+	+	411	0
+	+	412	0
+	+	418	0
+	+	432	0
+	+	432	0
+	+	433	0
+	+	389	0
+	+	389	0
+	+	389	0
+	+	389	0
+	+	389	0
+	+	389	0
+	+	389	0
+	+	389	0
+	+	389	0
+	+	389	0
+	+	298	0
+	+	299	0
+	+	322	0
+	+	324	0
+	+	329	0
+	+	334	0
+	+	335	0
+	+	335	0
+	+	335	0
+	+	336	0
+	+	336	0
+	+	336	0
+	+	337	0
+	+	342	0
+	+	365	0
+	+	372	0
+	+	388	0
+	+	388	0
+	+	388	0
+	+	294	0
+	+	294	0
+	+	294	0
+	+	294	0
+	+	294	0
+	+	294	0
+	+	294	0
+	+	167	0
+	+	168	0
+	+	191	0
+	+	196	0
+	+	219	0
+	+	226	0
+	+	228	0
+	+	245	0
+	+	247	0
+	+	293	0
+	+	293	0
+	+	293	0
+	+	293	0
+	+	293	0
+	+	293	0
+	+	162	0
+	+	162	0
+	+	139	0
+	+	139	0
+	+	139	0
+	+	116	0
+	+	116	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	70	0
+	+	70	0
+	+	70	0
+	+	47	0
+	+	47	0
+	+	47	0
+	+	24	0
+	+	24	0
 
-> ~/vimfiles/bundle/.neobundle/doc/unite.txt
-	"	318	0
-
-> P:/TOOL/vim74-kaoriya-win32/[unite] - default
-	"	5	0
-	^	5	0
-	.	1	0
+> P:/TOOL/vim74-kaoriya-win32/[quickrun output]
+	"	1	0
+	.	2	0
 	+	1	0
 	+	1	0
 	+	1	0
@@ -299,36 +433,30 @@ $i
 	+	1	0
 	+	1	0
 	+	1	0
+	+	7	0
 	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	21	0
-	+	21	0
-	+	21	0
-	+	21	0
-	+	16	0
-	+	1	0
-	+	16	0
-	+	16	0
-	+	16	0
-	+	16	0
+	+	7	0
 	+	6	0
+	+	1	0
 	+	6	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	5	0
+	+	1	0
+	+	5	0
+	+	3	0
+	+	1	0
+	+	3	0
+	+	1	0
+	+	1	0
+	+	1	0
 	+	2	0
-	+	1	0
 
 > ~/userautoload/bundle.vim
-	"	58	44
-	^	52	47
-	.	52	45
+	"	52	13
+	^	59	15
+	.	59	13
 	+	1	0
 	+	34	0
 	+	35	0
@@ -357,63 +485,398 @@ $i
 	+	22	0
 	+	21	0
 	+	20	0
-	+	66	0
-	+	67	0
-	+	67	0
-	+	67	1
-	+	67	0
-	+	66	0
-	+	67	0
-	+	67	0
+	+	73	0
+	+	74	0
+	+	74	0
+	+	74	1
+	+	74	0
+	+	73	0
+	+	74	0
+	+	74	0
 	+	22	0
 	+	20	17
 	+	19	36
 	+	21	29
 	+	22	28
-	+	52	45
+	+	52	0
+	+	54	14
+	+	54	10
+	+	54	10
+	+	54	9
+	+	55	10
+	+	53	8
+	+	57	9
+	+	61	10
+	+	61	0
+	+	55	0
+	+	60	0
+	+	59	13
 
 > ~/userautoload/mapping.vim
-	"	1	0
-	^	2	30
-	.	2	0
+	"	10	28
+	^	10	22
+	.	10	28
 	+	2	0
-
-> P:/TOOL/vim74-kaoriya-win32/a.html
-	"	4	0
-	^	4	4
-	.	4	0
-	+	1	0
-	+	5	0
-	+	15	4
-	+	15	0
-	+	15	0
-	+	15	0
+	+	11	0
+	+	4	27
+	+	11	9
+	+	4	23
+	+	11	0
+	+	6	24
+	+	10	0
 	+	8	0
-	+	7	0
-	+	16	1
-	+	7	0
-	+	16	0
-	+	21	0
-	+	16	0
-	+	20	0
-	+	16	0
-	+	1	0
+	+	10	49
+	+	9	29
+	+	10	28
+
+> ~/userautoload/quickrun_rc.vim
+	"	1	0
+	^	4	62
+	.	4	0
 	+	3	0
+	+	2	0
 	+	4	0
-	i	17	3
-	j	16	1
-	k	17	1
-	l	17	1
-	m	16	2
+	+	4	0
+
+> P:/TOOL/vim74-kaoriya-win32/vim74/after/ftplugin/html.vim
+	"	7	37
+	.	1	0
+	+	1	0
+
+> ~/vimfiles/bundle/.neobundle/doc/openbrowser.txt
+	"	169	27
+
+> ~/.vimrc
+	"	12	49
+	^	12	51
+	.	12	49
+	+	14	26
+	+	14	29
+	+	14	3
+	+	1	0
+	+	1	27
+	+	1	15
+	+	1	0
+	+	1	0
+	+	1	9
+	+	1	0
+	+	1	0
+	+	14	0
+	+	14	9
+	+	1	0
+	+	1	33
+	+	1	12
+	+	1	29
+	+	1	3
+	+	14	0
+	+	14	30
+	+	14	0
+	+	14	0
+	+	14	0
+	+	1	0
+	+	14	0
+	+	14	0
+	+	1	0
+	+	1	26
+	+	14	0
+	+	19	0
+	+	4	9
+	+	2	0
+	+	4	26
+	+	5	27
+	+	6	28
+	+	7	25
+	+	4	0
+	+	14	0
+	+	16	0
+	+	8	4
+	+	14	0
+	+	14	0
+	+	9	0
+	+	7	50
+	+	6	47
+	+	5	68
+	+	4	40
+	+	1	0
+	+	2	0
+	+	3	0
+	+	2	0
+	+	1	32
+	+	8	49
+	+	14	0
+	+	14	0
+	+	19	0
+	+	14	0
+	+	13	0
+	+	10	39
+	+	10	51
+	+	11	33
+	+	11	37
+	+	10	35
+	+	11	0
+	+	12	49
+
+> ~/my_snippets/html.snip
+	"	42	8
+	^	40	24
+	.	31	69
+	+	2	0
+	+	3	0
+	+	3	0
+	+	14	0
+	+	18	21
+	+	19	18
+	+	19	0
+	+	44	0
+	+	44	0
+	+	44	0
+	+	19	15
+	+	20	14
+	+	18	17
+	+	19	30
+	+	20	0
+	+	43	0
+	+	21	21
+	+	22	8
+	+	29	0
+	+	18	0
+	+	19	0
+	+	20	0
+	+	21	0
+	+	24	0
+	+	26	24
+	+	29	0
+	+	32	0
+	+	37	0
+	+	31	8
+	+	31	58
+	+	40	23
+	+	31	69
+
+> ~/vimfiles/bundle/.neobundle/doc/neosnippet.txt
+	"	365	0
+	^	370	9
 
 > ~/vimfiles/bundle/neosnippet-snippets/neosnippets/html.snip
-	"	39	14
+	"	14	11
 	^	47	10
 	.	86	10
 	+	86	10
 
-> ~/vimfiles/bundle/.neobundle/doc/neosnippet.txt
-	"	127	9
+> P:/TOOL/vim74-kaoriya-win32/[unite] - default
+	"	3	4
+	^	3	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	48	0
+	+	1	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	38	0
+	+	38	0
+	+	34	0
+	+	1	0
+	+	34	0
+	+	34	0
+	+	34	0
+	+	34	0
+	+	1	0
+	+	34	0
+	+	34	0
+	+	34	0
+	+	32	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	16	0
+	+	1	0
+	+	16	0
+	+	16	0
+	+	16	0
+	+	16	0
+	+	16	0
+	+	16	0
+	+	6	0
+	+	2	0
+
+> ~/userautoload/vimfiler_rc.vim
+	"	7	22
+	.	3	54
+	+	1	0
+	+	3	54
+
+> ~/userautoload/Unite_rc.vim
+	"	4	40
+	^	10	53
+	.	10	52
+	+	10	52
+
+> ~/userautoload/tab_rc.vim
+	"	6	0
+
+> P:/takasugi/ÉvÉçÉOÉâÉÄáT/CSS/RENSHUU3/HOME.html
+	"	10	0
+	.	18	0
+	+	18	0
+
+> ~/userautoload/neosnippet_rc.vim
+	"	21	4
+	^	7	34
+	.	17	0
+	+	1	0
+	+	6	0
+	+	7	33
+	+	17	0
+
+> P:/TOOL/vim74-kaoriya-win32/[YankRing]
+	"	10	0
+	.	2	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	23	0
+	+	23	0
+	+	2	0
+
+> P:/TOOL/vim74-kaoriya-win32/plugins/vimdoc-ja/doc/pattern.jax
+	"	311	0
+
+> ~/userautoload/YankRing_rc.vim
+	"	1	43
+	^	1	45
+	.	1	43
+	+	1	7
+	+	1	43
+
+> ~/vimfiles/bundle/.neobundle/doc/yankring.txt
+	"	135	0
+
+> ~/userautoload/neocom.vim
+	"	7	0
+	^	7	0
+	.	9	9
+	+	1	0
+	+	7	28
+	+	7	0
+	+	5	0
+	+	7	0
+	+	5	0
+	+	10	0
+	+	3	0
+	+	4	0
+	+	5	0
+	+	7	0
+	+	5	36
+	+	7	0
+	+	9	9
+
+> ~/vimfiles/bundle/.neobundle/doc/neocomplete.txt
+	"	380	33
+
+> P:/TOOL/vim74-kaoriya-win32/‚Äìremote-tab-silent
+	"	1	0
+
+> P:/TOOL/vim74-kaoriya-win32/lua51.dll
+	"	1	0
+
+> P:/TOOL/vim74-kaoriya-win32/luajit.exe
+	"	1	0
+
+> P:/TOOL/vim74-kaoriya-win32/msvcr100.dll
+	"	2	31
+
+> ~/userautoload/basic.vim
+	"	22	11
+	^	24	41
+	.	24	39
+	+	1	0
+	+	32	0
+	+	11	0
+	+	34	0
+	+	17	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	31	7
+	+	33	16
+	+	21	0
+	+	22	11
+	+	23	0
+	+	22	13
+	+	23	16
+	+	24	16
+	+	26	16
+	+	25	16
+	+	27	0
+	+	26	16
+	+	22	1
+	+	23	33
+	+	24	39
+
+> ~/_gvimrc
+	"	6	10
+	^	9	0
+	.	6	10
+	+	1	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	4	0
+	+	12	0
+	+	13	0
+	+	14	17
+	+	4	0
+	+	13	0
+	+	5	0
+	+	9	0
+	+	6	10
+
+> P:/TOOL/vim74-kaoriya-win32/CHANGES.txt
+	"	1	0
+
+> P:/TOOL/vim74-kaoriya-win32/gvimrc
+	"	1	0
+
+> ~/vimfiles/bundle/.neobundle/doc/unite.txt
+	"	318	0
 
 > P:/TOOL/vim74-kaoriya-win32/a.c
 	"	4	1
@@ -428,77 +891,6 @@ $i
 	+	3	17
 	+	4	1
 
-> ~/.vimrc
-	"	11	0
-	^	10	51
-	.	10	51
-	+	12	26
-	+	12	29
-	+	12	3
-	+	1	0
-	+	1	27
-	+	1	15
-	+	1	0
-	+	1	0
-	+	1	9
-	+	1	0
-	+	1	0
-	+	12	0
-	+	12	9
-	+	1	0
-	+	1	33
-	+	1	12
-	+	1	29
-	+	1	3
-	+	12	0
-	+	12	30
-	+	12	0
-	+	12	0
-	+	12	0
-	+	1	0
-	+	12	0
-	+	12	0
-	+	1	0
-	+	1	26
-	+	12	0
-	+	17	0
-	+	4	9
-	+	2	0
-	+	4	26
-	+	5	27
-	+	6	28
-	+	7	25
-	+	4	0
-	+	12	0
-	+	14	0
-	+	8	4
-	+	12	0
-	+	12	0
-	+	9	0
-	+	7	50
-	+	6	47
-	+	5	68
-	+	4	40
-	+	1	0
-	+	2	0
-	+	3	0
-	+	2	0
-	+	1	32
-	+	8	49
-	+	12	0
-	+	12	0
-	+	17	0
-	+	12	0
-	+	11	0
-	+	10	39
-	+	10	51
-
-> ~/userautoload/Unite_rc.vim
-	"	4	40
-	^	10	53
-	.	10	52
-	+	10	52
-
 > P:/TOOL/vim74-kaoriya-win32/1.c
 	"	3	2
 	^	3	3
@@ -510,36 +902,8 @@ $i
 	.	1	0
 	+	1	0
 
-> ~/userautoload/basic.vim
-	"	13	0
-	.	11	0
-	+	1	0
-	+	22	0
-	+	11	0
-	+	23	0
-	+	17	0
-	+	11	0
-	+	11	0
-	+	11	0
-
 > ~/userautoload/vimfiler_rc.v
 	"	1	0
-
-> ~/userautoload/vimfiler_rc.vim
-	"	4	0
-	.	3	54
-	+	1	0
-	+	3	54
-
-> ~/userautoload/neocom.vim
-	"	4	0
-	^	5	0
-	.	24	0
-	+	1	0
-	+	6	28
-	+	7	0
-	+	4	0
-	+	24	0
 
 > P:/TOOL/vim74-kaoriya-win32/[unite] - default-1
 	"	1	0
@@ -585,33 +949,12 @@ $i
 	.	2	0
 	+	2	0
 
-> P:/takasugi/ÉvÉçÉOÉâÉÄáT/CSS/RENSHUU3/HOME.html
-	"	1	0
-	.	18	0
-	+	18	0
-
 > P:/TOOL/vim74-kaoriya-win32/[unite] - action-1
 	"	1	0
 	^	1	2
 	.	23	0
 	+	2	0
 	+	23	0
-
-> ~/_gvimrc
-	"	8	3
-	^	4	1
-	.	8	0
-	+	1	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	4	0
-	+	7	0
-	+	8	0
-	+	9	17
-	+	4	0
-	+	8	0
 
 > ~/vimfiles/bundle/.neobundle/doc/neobundle.txt
 	"	79	2

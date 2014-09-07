@@ -19,10 +19,15 @@ set number
 set laststatus=2
 "ステータスラインに文字コードを表示
 
+"バーの非表示
+set guioptions-=T
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
 
-"最後に書く
-syntax on
-set nohlsearch
-set cursorline
 
 
+"タブ関係
+
+set showtabline=2

@@ -19,4 +19,15 @@ set number
 set laststatus=2
 "ステータスラインに文字コードを表示
 
+"バーの非表示
+set guioptions-=T "ツールバー非表示 
+set guioptions-=r "右スクロールバー非表示 
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
 
+
+
+"タブ関係
+
+set showtabline=2

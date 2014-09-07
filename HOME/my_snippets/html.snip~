@@ -1,0 +1,43 @@
+
+
+
+#Example:
+
+#>
+	#snippet    [name]
+	#abbr       [abbreviation]
+	#alias      [aliases]
+	#regexp     [pattern]
+	#options    [options]
+	   #if ${1:condition}
+	     #${2}
+	   #endif
+
+
+
+snippet H5
+abbr HTML5のテンプレート
+#alias 
+options indent        
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <meta charset="utf-8" />
+        <title>${1:title}</title>
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <link rel="stylesheet" type="text/css" href="${2:hogehoge.css"}">
+
+        <style>
+          article, aside, dialog, figure, footer, header,
+          hgroup, menu, nav, section { display: block; }
+        </style>
+
+        </head>
+        <body>
+        ${3:Hello World!}
+        </body>
+        </html>
+        

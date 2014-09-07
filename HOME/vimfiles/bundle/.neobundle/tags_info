@@ -1,3 +1,4 @@
+YankRing.vim
 emmet-vim
 neobundle.vim
 neocomplete.vim
@@ -5,9 +6,11 @@ neomru.vim
 neosnippet-snippets
 neosnippet.vim
 nerdcommenter
+open-browser.vim
 syntastic
 unite.vim
 vim-autoclose
+vim-editvar
 vim-quickrun
 vim-surround
 vimfiler.vim

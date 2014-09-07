@@ -1,0 +1,1 @@
+{'Neocomplete', 'g:neocomplete#enable_at_startup', 'inoremap', '<expr>', '<C-x>', '<C-f>', 'neocomplete#manual_filename_complete(', 'b:foo', 'echo'}
