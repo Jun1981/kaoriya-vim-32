@@ -13,11 +13,20 @@ NeoBundleFetch 'Shougo/neobundle.vim'
  
 " 今後このあたりに追加のプラグインをどんどん書いて行きます！！"
 "
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'Shougo/unite'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'Shougo/vimproc.vim' ,{
+    \ 'build' : {
+    \ 'windows' : 'make -f make_mingw32.mak',
+    \ 'cygwin' : 'make -f make_cygwin.mak',
+    \ 'mac' : 'make -f make_mac.mak',
+    \ 'unix' : 'make -f make_unix.mak',
+  \ },
+\ }
 
 
 
@@ -39,6 +48,9 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdcommenter'
 
 NeoBundle 'tpope/vim-surround'
+
+"NeoBundle 'sjl/gundo.vim' "ReDo UnDo ツリー管理 
+
 
 
 call neobundle#end()

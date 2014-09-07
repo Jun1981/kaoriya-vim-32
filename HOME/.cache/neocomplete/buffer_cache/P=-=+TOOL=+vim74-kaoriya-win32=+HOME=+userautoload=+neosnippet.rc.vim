@@ -1,0 +1,1 @@
+{'Plugin', 'mappings', 'imap', 'Plug', 'neosnippet_expand_or_jump', 'smap', 'xmap', 'neosnippet_expand_target', 'SuperTab', 'like', 'snippets', 'behavior', 'expr', 'neosnippet', 'expandable_or_jumpable', 'pumvisible', 'snippet_complete', 'marker', 'conceal', 'conceallevel', 'concealcursor', 'endif'}

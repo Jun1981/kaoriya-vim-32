@@ -1,1 +1,1 @@
-{'Neocomplete', 'neocomplete', 'enable_at_startup'}
+{'Neocomplete', 'g:neocomplete#enable_at_startup', 'Liquid', 'path', '&l:path', 'g:neocomplete#sources#include#paths', 'liquid', 'Users', 'alpaca', 'projects', 'github', 'source', '&l:include', 'g:neocomplete#sources#include#patterns', '-zA-Z0-9', '&l:includeexpr', 'g:neocomplete#sources#include#exprs', 'substitute(', 'v:fname', 'g:neocomplete#sources#file_include#delimiters', 'g:neocomplete#sources#file_include#exts', 'jpeg'}

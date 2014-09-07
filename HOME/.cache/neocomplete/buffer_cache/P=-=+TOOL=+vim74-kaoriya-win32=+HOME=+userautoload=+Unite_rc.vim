@@ -1,0 +1,1 @@
+{'Unite', 'g:unite_enable_start_insert', 'g:unite_source_history_yank_enable', 'g:unite_source_file_mru_limit', 'nnoremap', '<silent>', '<C-u>', 'history', 'yank', '<CR>', 'buffer', 'UniteWithBufferDir', '-buffer-name=', 'files', 'file', 'register', 'file_mru'}
