@@ -1,0 +1,12 @@
+scriptencoding cp932
+set guifont=Migu_1M:h12:cSHIFTJIS  
+" ツールバーを削除
+set guioptions=
+set cmdheight=1
+set ambiwidth=double
+colorscheme Candycode
+gui 
+
+
+
+

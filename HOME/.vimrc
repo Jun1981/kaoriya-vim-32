@@ -1,0 +1,19 @@
+" •ªŠ„‚µ‚½İ’èƒtƒ@ƒCƒ‹‚ğ‚·‚×‚Ä“Ç‚İ‚Ş
+set runtimepath+=~/vimfiles/
+
+source ~/userautoload/basic.vim
+source ~/userautoload/bundle.vim
+source ~/userautoload/mapping.vim
+source ~/userautoload/neocom.vim
+"
+"
+
+
+"ÅŒã‚É‘‚­
+syntax on
+set nohlsearch
+set cursorline
+
+
+
+

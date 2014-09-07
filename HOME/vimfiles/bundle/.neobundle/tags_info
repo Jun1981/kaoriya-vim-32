@@ -1,0 +1,12 @@
+emmet-vim
+neobundle.vim
+neocomplete
+neosnippet
+nerdcommenter
+syntastic
+unite
+vim-autoclose
+vim-quickrun
+vim-surround
+vimfiler
+vimproc

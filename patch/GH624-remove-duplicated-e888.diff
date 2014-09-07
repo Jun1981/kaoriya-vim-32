@@ -1,0 +1,15 @@
+# HG changeset patch
+# Parent c147a7906bdbc7c689ac9a72d4e62c14b9ae610e
+
+diff -r c147a7906bdb runtime/doc/pattern.txt
+--- a/runtime/doc/pattern.txt	Sun Aug 31 14:29:45 2014 +0900
++++ b/runtime/doc/pattern.txt	Sun Aug 31 15:17:31 2014 +0900
+@@ -838,7 +838,7 @@
+ 	branch is used.
+ 	Example: "end\ze\(if\|for\)" matches the "end" in "endif" and
+ 	"endfor".
+-	This cannot be followed by a multi. *E888*
++	This cannot be followed by a multi.
+ 	{not in Vi} {not available when compiled without the |+syntax| feature}
+ 
+ 						*/\%^* *start-of-file*
